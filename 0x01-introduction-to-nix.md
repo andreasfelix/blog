@@ -1,4 +1,4 @@
-# 0x02 Introduction to Nix
+# 0x01 Introduction to Nix
 
 *August 11, 2022 - Felix Andreas*
 
@@ -188,7 +188,7 @@ Here are some of Nix's primitive data types:
 [ 1 2 3 ]
 
 # attribute sets
-{ name = "melli"; age = 1; }
+{ name = "Alice"; age = 1; }
 ```
 
 You can define functions:
@@ -202,7 +202,7 @@ There is the `let ... in` expression to locally bind a value to a name:
 ```nix
 let
   greet = name : "Hello, ${name}!";
-  name = "Melli";
+  name = "Alice";
 in greet name
 ```
 
@@ -218,7 +218,7 @@ You can import other `.nix` files:
 ```nix
 let 
   lib = import ./lib.nix;
-in lib.greet "Melli"
+in lib.greet "Alice"
 ```
 
 
@@ -415,13 +415,6 @@ pkgs: pkgs.stdenv.mkDerivation {
     cp libcurl-example $out/bin
   '';
 }
-```
-
-You should be able to use it as well, just type:
-
-```
-nix shell git+ssh://git@github.com/melli-labs/academy?ref=0x02-introduction-to-nix#0x02.libcurl-example
-libcurl-example
 ```
 
 ## 👉️ Profiles and Environments 

@@ -16,46 +16,12 @@ The concepts you will know about by the end of this workshop can grouped be into
 
 We will dedicate a section to each category of concepts. Let's go 🚀
 
-## 🗒️ Outline
-aa
-* Setup (5 min)
-* Hands-on: A deep dive into Git's internals (30 min)
-* Discussion (15 min)
-* Oral Exam (2 minutes each)
-
 ## 📝 References
 
 Some excellent materials to learn about Git:
 
 * [A Tale of Three Trees (Talk)](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/)
 * [Git Internals (Pro Git book)](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
-
-## 🚀 Setup
-
-To follow along, clone the repository
-
-```
-git clone git@gitlab.com:meetap-it/emilia/emilia-academy.git
-```
-
-Switch branch
-
-```
-git switch 0x00-git-under-the-hood
-```
-
-Load the virtual environment of this workshop
-
-```
-nix develop .#0x00
-cd 0x00-git-under-the-hood
-```
-
-Test if the setup works 🐟️🐠🦈
-
-```
-asciiquarium
-```
 
 ## 📜 History
 * Linus Torvalds created Git in 2005 for the development of the Linux kernel
@@ -214,8 +180,8 @@ yields:
 
 ```
 commit 205tree 819dcf8f883e6f376f502ac22d745a204cd1ebaf
-author Felix Andreas <felix.andreas@mit-emilia.de> 1647514185 +0100
-committer Felix Andreas <felix.andreas@mit-emilia.de> 1647514185 +0100
+author Felix Andreas <felix.andreas@example.org> 1647514185 +0100
+committer Felix Andreas <felix.andreas@example.org> 1647514185 +0100
 
 first commit
 ```
@@ -299,8 +265,8 @@ So, there seems to be two new objects in our database. Why? Let's find out! But 
 $ git cat-file -p 146b3a
 tree a236711ffcc61e1dc67182bbe58a4ddce15fd822
 parent bbeb0a397f7b73ef01553bc901185e459dea661d
-author Felix Andreas <felix.andreas@mit-emilia> 1647514536 +0100
-committer Felix Andreas <felix.andreas@mit-emilia> 1647514536 +0100
+author Felix Andreas <felix.andreas@example.org> 1647514536 +0100
+committer Felix Andreas <felix.andreas@example.org> 1647514536 +0100
 
 second commit
 ```
